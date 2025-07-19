@@ -1,0 +1,132 @@
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aplicativos PC - NotifyProX</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+<style>
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d 0%, #111111 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #00ff88;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1rem 3.5rem;
+    position: relative;
+  }
+  a.voltar-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 255, 136, 0.15);
+    border: 2px solid #00ff88;
+    border-radius: 12px;
+    color: #00ff88;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+    user-select: none;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  a.voltar-btn:hover,
+  a.voltar-btn:focus {
+    box-shadow:
+      0 0 8px #00ff88,
+      0 0 16px #00ff88,
+      0 0 24px #00ff88;
+    transform: scale(1.1);
+    outline: none;
+  }
+  /* Logo */
+  h1.logo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00ff88, #00cc66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 0 0 1.5rem;
+    animation: fadeIn 1s ease forwards;
+    user-select: none;
+    text-shadow:
+      0 0 6px #00ff88,
+      0 0 12px #00ff88;
+  }
+  /* Title */
+  h2.title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #00ff88;
+    text-align: center;
+    margin: 0 0 0.75rem;
+    user-select: none;
+  }
+  /* Description text */
+  p.description {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #00ff88cc;
+    text-align: center;
+    margin: 0 0 2rem;
+    user-select: none;
+  }
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111111cc;
+    color: #007a4d;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    user-select: none;
+    box-shadow:
+      inset 0 1px 3px #00ff88aa;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    h1.logo {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2.title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p.description {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    a.voltar-btn {
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <a href="index.html" class="voltar-btn" aria-label="Voltar para página inicial">← Voltar</a>
+  <h1 class="logo" aria-label="Logo NotifyProX">NotifyProX</h1>
+  <h2 class="title">Aplicativos PC</h2>
+  <p class="description">Aqui você encontra nossos aplicativos exclusivos para PC. (em breve)</p>
+  <footer>© 2025 NotifyProX. Todos os direitos reservados.</footer>
+</body>
+</html>
