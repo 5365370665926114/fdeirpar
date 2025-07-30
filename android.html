@@ -3,130 +3,105 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Aplicativos Android - NotifyProX</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 <style>
   @keyframes fadeIn {
     from {opacity: 0; transform: translateY(-10px);}
     to {opacity: 1; transform: translateY(0);}
   }
   body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0d0d0d 0%, #111111 100%);
     font-family: 'Poppins', sans-serif;
-    color: #00ff88;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem 1rem 3.5rem;
-    position: relative;
   }
-  a.voltar-btn {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(0, 255, 136, 0.15);
-    border: 2px solid #00ff88;
-    border-radius: 12px;
-    color: #00ff88;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0.5rem 1.25rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition:
-      box-shadow 0.3s ease,
-      transform 0.3s ease;
-    user-select: none;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+  .fade-in {
+    animation: fadeIn 1s ease forwards;
   }
-  a.voltar-btn:hover,
-  a.voltar-btn:focus {
+  .neon-border {
+    border-color: #00ff88;
+  }
+  .neon-shadow-hover:hover {
     box-shadow:
       0 0 8px #00ff88,
       0 0 16px #00ff88,
       0 0 24px #00ff88;
-    transform: scale(1.1);
-    outline: none;
-  }
-  /* Logo */
-  h1.logo {
-    font-size: 3.5rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, #00ff88, #00cc66);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    margin: 0 0 1.5rem;
-    animation: fadeIn 1s ease forwards;
-    user-select: none;
-    text-shadow:
-      0 0 6px #00ff88,
-      0 0 12px #00ff88;
-  }
-  /* Title */
-  h2.title {
-    font-weight: 700;
-    font-size: 2rem;
-    color: #00ff88;
-    text-align: center;
-    margin: 0 0 0.75rem;
-    user-select: none;
-  }
-  /* Description text */
-  p.description {
-    font-weight: 700;
-    font-size: 1.125rem;
-    color: #00ff88cc;
-    text-align: center;
-    margin: 0 0 2rem;
-    user-select: none;
-  }
-  /* Footer */
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #111111cc;
-    color: #007a4d;
-    font-weight: 700;
-    font-size: 0.875rem;
-    text-align: center;
-    padding: 0.75rem 1rem;
-    user-select: none;
-    box-shadow:
-      inset 0 1px 3px #00ff88aa;
-  }
-  /* Responsive adjustments */
-  @media (max-width: 640px) {
-    h1.logo {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    h2.title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    p.description {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    a.voltar-btn {
-      font-size: 0.9rem;
-      padding: 0.4rem 1rem;
-    }
   }
 </style>
 </head>
-<body>
-  <a href="index.html" class="voltar-btn" aria-label="Voltar para página inicial">← Voltar</a>
-  <h1 class="logo" aria-label="Logo NotifyProX">NotifyProX</h1>
-  <h2 class="title">Aplicativos Android</h2>
-  <p class="description">Aqui você encontra nossos aplicativos exclusivos para Android. (em breve)</p>
-  <footer>© 2025 NotifyProX. Todos os direitos reservados.</footer>
+<body class="bg-gradient-to-br from-black via-zinc-900 to-black text-green-400 flex flex-col items-center px-4 pt-16 pb-14 min-h-screen relative">
+  <a href="index.html" aria-label="Voltar para página inicial" class="fixed top-4 left-4 bg-green-400/15 border-2 border-green-400 rounded-xl text-green-400 font-bold text-base px-5 py-2 flex items-center gap-1.5 cursor-pointer select-none transition-transform transition-shadow duration-300 hover:scale-110 hover:shadow-[0_0_8px_#00ff88,0_0_16px_#00ff88,0_0_24px_#00ff88] focus:scale-110 focus:shadow-[0_0_8px_#00ff88,0_0_16px_#00ff88,0_0_24px_#00ff88] focus:outline-none z-50">
+    <i class="fas fa-arrow-left"></i> Voltar
+  </a>
+
+  <h1 aria-label="Logo NotifyProX" class="fade-in text-5xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 text-center mb-6 select-none drop-shadow-[0_0_6px_rgba(0,255,136,0.7)]">
+    NotifyProX
+  </h1>
+
+  <h2 class="text-green-400 font-extrabold text-2xl sm:text-3xl text-center mb-3 select-none">Aplicativos Android</h2>
+
+  <p class="text-green-400/80 font-extrabold text-lg sm:text-xl text-center mb-8 select-none max-w-xl">
+    Aqui você encontra nossos aplicativos exclusivos para Android.
+  </p>
+
+  <section aria-label="Seção de produtos" class="w-full max-w-7xl flex flex-wrap justify-center gap-8 mb-12">
+    <article class="flex flex-col bg-black border-2 neon-border rounded-xl max-w-xs w-full shadow-md neon-shadow-hover transition-shadow duration-300">
+      <img src="https://media.discordapp.net/attachments/1395075107256275047/1399772400949792768/kiwify.jpg?ex=688b88a2&is=688a3722&hm=cfe16ed8bb5e35d9a7c19b2e903adac0288b6df573ad1de33d6bfac1bc4a569c&=&format=webp" alt="Imagem do dashboard fake kiwify mostrando interface de painel com gráficos e estatísticas em tons verdes e pretos" class="rounded-t-xl object-cover w-full h-48 sm:h-56" />
+      <div class="p-5 flex flex-col flex-grow">
+        <h3 class="text-green-400 font-extrabold text-xl mb-2 select-none">dashboard fake kiwify</h3>
+        <p class="text-green-400 font-bold text-lg mb-4 select-none">R$12,99</p>
+        <a href="https://app.pushinpay.com.br/service/pay/9f81e6dd-0489-402c-97d5-7b0fb9cddde9" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-transparent border-2 border-green-400 text-green-400 font-bold rounded-lg px-5 py-2 text-center hover:bg-green-400 hover:text-black transition-colors duration-300 select-none cursor-pointer">
+          Comprar
+        </a>
+      </div>
+    </article>
+
+    <article class="flex flex-col bg-black border-2 neon-border rounded-xl max-w-xs w-full shadow-md neon-shadow-hover transition-shadow duration-300">
+      <img src="https://media.discordapp.net/attachments/1395075107256275047/1400150311905136802/download_1.jpg?ex=688b9717&is=688a4597&hm=5bf8250c64a2f8677e2a9d9da2023a7b500c40e0986e327c2ea7af42fb4e5f6d&=&format=webp" alt="Imagem do gerador de notificações kiwify mostrando tela de notificações em estilo moderno verde e preto" class="rounded-t-xl object-cover w-full h-48 sm:h-56" />
+      <div class="p-5 flex flex-col flex-grow">
+        <h3 class="text-green-400 font-extrabold text-xl mb-2 select-none">gerador de notificações kiwify</h3>
+        <p class="text-green-400 font-bold text-lg mb-4 select-none">R$9,99</p>
+        <a href="https://app.pushinpay.com.br/service/pay/9f83faa2-9c9e-432f-8474-dfa4c2dcac4b" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-transparent border-2 border-green-400 text-green-400 font-bold rounded-lg px-5 py-2 text-center hover:bg-green-400 hover:text-black transition-colors duration-300 select-none cursor-pointer">
+          Comprar
+        </a>
+      </div>
+    </article>
+
+    <article class="flex flex-col bg-black border-2 neon-border rounded-xl max-w-xs w-full shadow-md neon-shadow-hover transition-shadow duration-300">
+      <img src="https://media.discordapp.net/attachments/1395075107256275047/1400150311548616826/photo_4999266710943018584_y.jpg?ex=688b9717&is=688a4597&hm=f8ad9c1dbda406c94d7c564d111e1019670605eb6a6e3b627fa7800e1cd43036&=&format=webp" alt="Imagem do nubank fake mostrando interface de aplicativo bancário com tema roxo e verde neon" class="rounded-t-xl object-cover w-full h-48 sm:h-56" />
+      <div class="p-5 flex flex-col flex-grow">
+        <h3 class="text-green-400 font-extrabold text-xl mb-2 select-none">nubank fake</h3>
+        <p class="text-green-400 font-bold text-lg mb-4 select-none">R$14,99</p>
+        <a href="https://app.pushinpay.com.br/service/pay/9f83ff4e-7eaf-4ce0-818f-a9e31e52930a" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-transparent border-2 border-green-400 text-green-400 font-bold rounded-lg px-5 py-2 text-center hover:bg-green-400 hover:text-black transition-colors duration-300 select-none cursor-pointer">
+          Comprar
+        </a>
+      </div>
+    </article>
+
+    <article class="flex flex-col bg-black border-2 neon-border rounded-xl max-w-xs w-full shadow-md neon-shadow-hover transition-shadow duration-300">
+      <img src="https://media.discordapp.net/attachments/1395075107256275047/1400150311170998402/photo_5177389183780629516_y.jpg?ex=688b9717&is=688a4597&hm=78560e9ea05d869e795abc2644e1c7479ca373d73f471cbbc2a17e451b6061d9&=&format=webp" alt="Imagem do gerador de notificações nubank mostrando tela de notificações bancárias com tema roxo e verde neon" class="rounded-t-xl object-cover w-full h-48 sm:h-56" />
+      <div class="p-5 flex flex-col flex-grow">
+        <h3 class="text-green-400 font-extrabold text-xl mb-2 select-none">gerador de notificações nubank</h3>
+        <p class="text-green-400 font-bold text-lg mb-4 select-none">R$9,99</p>
+        <a href="https://app.pushinpay.com.br/service/pay/9f83ffc6-f3b1-4fe0-a461-8cb4a7a6ed5b" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-transparent border-2 border-green-400 text-green-400 font-bold rounded-lg px-5 py-2 text-center hover:bg-green-400 hover:text-black transition-colors duration-300 select-none cursor-pointer">
+          Comprar
+        </a>
+      </div>
+    </article>
+
+    <article class="flex flex-col bg-black border-2 neon-border rounded-xl max-w-xs w-full shadow-md neon-shadow-hover transition-shadow duration-300">
+      <img src="https://media.discordapp.net/attachments/1395075107256275047/1400150310755766292/photo_5095917614135356567_y.jpg?ex=688b9717&is=688a4597&hm=396c80accc550bd5dd74ff0fe4921af18aea6bcc3e8e6c5e5d17a1c80176c7ea&=&format=webp" alt="Imagem do picpay fake mostrando interface de aplicativo de pagamentos com tema verde neon e preto" class="rounded-t-xl object-cover w-full h-48 sm:h-56" />
+      <div class="p-5 flex flex-col flex-grow">
+        <h3 class="text-green-400 font-extrabold text-xl mb-2 select-none">picpay fake</h3>
+        <p class="text-green-400 font-bold text-lg mb-4 select-none">R$14,99</p>
+        <a href="https://app.pushinpay.com.br/service/pay/9f840014-f415-471e-8a15-aecf1a96c81a" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-transparent border-2 border-green-400 text-green-400 font-bold rounded-lg px-5 py-2 text-center hover:bg-green-400 hover:text-black transition-colors duration-300 select-none cursor-pointer">
+          Comprar
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <footer class="fixed bottom-0 left-0 w-full bg-zinc-900/80 text-green-700 font-extrabold text-sm text-center py-3 select-none shadow-inner shadow-green-400/70">
+    © 2025 NotifyProX. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
